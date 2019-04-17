@@ -1,16 +1,15 @@
 package aircraft;
 
-import converter.Converter;
 import instruction.Compass;
 import tableLand.TableLand;
 
 public class Builders {
     private final Coordinate coordinate = new Coordinate(1, 2);
     private final Aircraft aircraft = new Aircraft(coordinate, Compass.NORTH);
-    private final TableLand tableLand = new TableLand("marte", 10, 10);
+    private final TableLand tableLand = new TableLand( 10, 10);
     private final Sensor sensor = new Sensor(tableLand);
     private final Nasa nasa = new Nasa(aircraft, tableLand, sensor);
-    private final Converter converter = new Converter();
+//    private final ConvertStringForInstruction converter = new ConvertStringForInstruction();
 
     public Coordinate getCoordinate() {
         return coordinate;
@@ -32,7 +31,7 @@ public class Builders {
         return nasa;
     }
 
-    public Converter getConverter() {
-        return converter;
-    }
+//    public ConvertStringForInstruction getConverter() {
+//        return converter;
+//    }
 }

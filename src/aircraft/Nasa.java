@@ -2,7 +2,7 @@ package aircraft;
 
 
 import aircraft.directions.*;
-import instruction.Direction;
+import instruction.Instruction;
 import tableLand.TableLand;
 
 import java.util.List;
@@ -18,21 +18,22 @@ public class Nasa {
         this.sensor = sensor;
     }
 
-    private void rotateAircraft(List<Direction> direction) {
-        if (Direction.L.equals(direction.get(posicaoNaLista).asChar())) {
-            aircraft.setCompass(NextDirection.getEsquerdaDe(aircraft.getCompass()));
-        } else if (Direction.R.equals(direction.get(posicaoNaLista).asChar())) {
-            aircraft.setCompass(NextDirection.getDireitaDe(aircraft.getCompass()));
+    private void rotateAircraft(List<Instruction> instruction) {
+        if (Instruction.L.equals(instruction.get(posicaoNaLista).asChar())) {
+            aircraft.setCompass(NextDirection.getLeftOf(aircraft.getCompass()));
+        } else if (Instruction.R.equals(instruction.get(posicaoNaLista).asChar())) {
+            aircraft.setCompass(NextDirection.getRightOf(aircraft.getCompass()));
         }
     }
 
-    public void moveAircraft(List<Direction> direction) {
-        for (posicaoNaLista = 0; posicaoNaLista < direction.size(); posicaoNaLista++) {
+    public void moveAircraft(List<Instruction> instruction) {
+        for (posicaoNaLista = 0; posicaoNaLista < instruction.size(); posicaoNaLista++) {
             if (sensor.verifyHaveSpaceTableLand(aircraft)) {
-                switch (getDirectionList(direction).get(posicaoNaLista).asChar()) {
+                switch (getDirectionList(instruction).get(posicaoNaLista).asChar()) {
                     case L:
+                        // Falls through
                     case R:
-                        rotateAircraft(direction);
+                        rotateAircraft(instruction);
                         break;
                     case M:
                         sensorAircraft();
@@ -45,7 +46,7 @@ public class Nasa {
 
     //Ajustar
     private void sensorAircraft() {
-        SensorNave sensorNave = null;
+        CompassDirection sensorNave = null;
         if (aircraft.getCompass().asChar() == 'N') {
             sensorNave = new North();
         }
@@ -58,14 +59,14 @@ public class Nasa {
         if (aircraft.getCompass().asChar() == 'S') {
             sensorNave = new South();
         }
-        sensorNave.moverNave(aircraft);
+        sensorNave.moveAircraft(aircraft);
     }
 
-    private List<Direction> getDirectionList(List<Direction> directions) {
-        for (Direction direction : directions) {
-            direction.asChar();
+    private List<Instruction> getDirectionList(List<Instruction> instructions) {
+        for (Instruction instruction : instructions) {
+            instruction.asChar();
         }
-        return directions;
+        return instructions;
     }
 
     @Override

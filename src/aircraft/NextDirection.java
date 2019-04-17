@@ -7,14 +7,14 @@ import java.util.Map;
 
 final class NextDirection {
 
-    private static Map<Compass, NextDirection> rosaDosVentos;
+    private static Map<Compass, NextDirection> windRose;
 
     static {
-        rosaDosVentos = new HashMap<Compass, NextDirection>();
-        rosaDosVentos.put(Compass.NORTH, new NextDirection(Compass.EAST, Compass.WEST));
-        rosaDosVentos.put(Compass.SOUTH, new NextDirection(Compass.WEST, Compass.EAST));
-        rosaDosVentos.put(Compass.EAST, new NextDirection(Compass.SOUTH, Compass.NORTH));
-        rosaDosVentos.put(Compass.WEST, new NextDirection(Compass.NORTH, Compass.SOUTH));
+        windRose = new HashMap<Compass, NextDirection>();
+        windRose.put(Compass.NORTH, new NextDirection(Compass.EAST, Compass.WEST));
+        windRose.put(Compass.SOUTH, new NextDirection(Compass.WEST, Compass.EAST));
+        windRose.put(Compass.EAST, new NextDirection(Compass.SOUTH, Compass.NORTH));
+        windRose.put(Compass.WEST, new NextDirection(Compass.NORTH, Compass.SOUTH));
     }
 
     private Compass right;
@@ -25,12 +25,12 @@ final class NextDirection {
         this.left = left;
     }
 
-    static Compass getDireitaDe(Compass direcaoAtual) {
-        return rosaDosVentos.get(direcaoAtual).getRight();
+    static Compass getRightOf(Compass currentDirection) {
+        return windRose.get(currentDirection).getRight();
     }
 
-    static Compass getEsquerdaDe(Compass direcaoAtual) {
-        return rosaDosVentos.get(direcaoAtual).getLeft();
+    static Compass getLeftOf(Compass currentDirection) {
+        return windRose.get(currentDirection).getLeft();
     }
 
     private Compass getLeft() {

@@ -1,18 +1,18 @@
 package instruction;
 
-public enum Direction{
+public enum Instruction {
 
     R('R'),
     L('L'),
     M('M');
 
     private final char asChar;
-    private Direction(char asChar) {
+    private Instruction(char asChar) {
         this.asChar = asChar;
     }
 
-    public static Direction of(Character value) {
-        for (Direction v : values()) {
+    public static Instruction of(Character value) {
+        for (Instruction v : values()) {
             if (v.asChar == value) {
                 return v;
             }
@@ -20,8 +20,8 @@ public enum Direction{
         throw new IllegalArgumentException();
     }
 
-    public Direction asChar() {
-        return Direction.of(asChar);
+    public Instruction asChar() {
+        return Instruction.of(asChar);
     }
 
 }

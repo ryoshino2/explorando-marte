@@ -1,38 +1,39 @@
-package converter;
-
-import instruction.Direction;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
-
-public class ConverterTest {
-
-    private Converter converter;
-    private List<Direction> directionList = new ArrayList<>();
-
-    @Before
-    public void setup() {
-        converter = new Converter();
-    }
-
-    @Test
-    public void breakString() {
-        String direction = "MLMM";
-        converter.breakString(direction);
-        directionList.add(Direction.M);
-        directionList.add(Direction.L);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-
-        assertEquals(converter.getComandos(), directionList);
-    }
-    @Test(expected = IllegalArgumentException.class)
-    public void notBeakString() {
-        String direction = "MLMS";
-        converter.breakString(direction);
-    }
-}
+//package converter;
+//
+//import instruction.Instruction;
+//import org.junit.Before;
+//import org.junit.Test;
+//
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//import static org.junit.Assert.assertEquals;
+//
+//public class ConverterTest {
+//
+//    private ConvertStringForInstruction converter;
+//    private List<Instruction> instructionList = new ArrayList<>();
+//
+//    @Before
+//    public void setup() {
+//        converter = new ConvertStringForInstruction();
+//    }
+//
+//    @Test
+//    public void breakStringForInstruction() {
+//        String direction = "MLMM";
+//        converter.transformStringForInstruction(direction);
+//        instructionList.add(Instruction.M);
+//        instructionList.add(Instruction.L);
+//        instructionList.add(Instruction.M);
+//        instructionList.add(Instruction.M);
+//
+//        assertEquals(converter.getCommands(), instructionList);
+//    }
+//
+//    @Test(expected = IllegalArgumentException.class)
+//    public void notBeakString() {
+//        String direction = "MLMS";
+//        converter.transformStringForInstruction(direction);
+//    }
+//}

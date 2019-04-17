@@ -7,7 +7,7 @@ public enum Compass {
     WEST('W');
 
     private final char asChar;
-    
+
     private Compass(char asChar) {
         this.asChar = asChar;
     }

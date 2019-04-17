@@ -18,8 +18,8 @@ public class Sensor {
         return verifyWidthLenghtNegative(aircraft);
     }
 
-    boolean verifyWidthLenghtNegative(Aircraft aircraft){
-        if(aircraft.getCoordinate().getLengthCoordinate() <0 || aircraft.getCoordinate().getWidthCoordinate()<0){
+    boolean verifyWidthLenghtNegative(Aircraft aircraft) {
+        if (aircraft.getCoordinate().getLengthCoordinate() < 0 || aircraft.getCoordinate().getWidthCoordinate() < 0) {
             throw new IllegalArgumentException("Fora do terreno");
         }
         return true;

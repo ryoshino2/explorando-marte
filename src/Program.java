@@ -10,9 +10,13 @@ public class Program {
         String directionList = null;
 
         directionList = scanner.nextLine();
-        builders.getConverter().breakString(directionList);
+//        builders.getConverter().transformStringForInstruction(directionList);
+//
+//        builders.getNasa().moveAircraft(builders.getConverter().getCommands());
 
-        builders.getNasa().moveAircraft(builders.getConverter().getComandos());
-        System.out.println("Localizado:  " + builders.getAircraft().getCoordinate() + " - Posicao: " + builders.getAircraft().getCompass());
+        builders.getAircraft().transformStringForInstruction(directionList);
+        builders.getNasa().moveAircraft(builders.getAircraft().getCommands());
+        System.out.println(builders.getAircraft().getCommands());
+        System.out.println("" + builders.getAircraft().getCoordinate().getWidthCoordinate() + " " + builders.getAircraft().getCoordinate().getLengthCoordinate()  + " " + builders.getAircraft().getCompass().asChar());
     }
 }

@@ -2,14 +2,12 @@ package tableLand;
 
 public class TableLand {
 
-    private String nameTableLand;
     //x
     private Integer width;
     //y
     private Integer length;
 
-    public TableLand(String nameTableLand, Integer width, Integer length) {
-        this.nameTableLand = nameTableLand;
+    public TableLand(Integer width, Integer length) {
         this.length = length;
         this.width = width;
     }
@@ -24,6 +22,6 @@ public class TableLand {
 
     @Override
     public String toString() {
-        return nameTableLand;
+        return getWidth() + " " + getLength();
     }
 }

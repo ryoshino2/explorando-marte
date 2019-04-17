@@ -3,10 +3,10 @@ package aircraft.directions;
 import aircraft.Aircraft;
 import aircraft.Coordinate;
 
-public class West implements SensorNave {
+public class West implements CompassDirection {
 
     @Override
-    public Coordinate moverNave(Aircraft aircraft) {
+    public Coordinate moveAircraft(Aircraft aircraft) {
         return aircraft.setCoordinate(aircraft.getCoordinate().subtractWidthCoordinate());
     }
 

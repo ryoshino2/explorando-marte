@@ -1,7 +1,7 @@
 package aircraft;
 
 import instruction.Compass;
-import instruction.Direction;
+import instruction.Instruction;
 import org.junit.Before;
 import org.junit.Test;
 import tableLand.TableLand;
@@ -15,71 +15,71 @@ public class SensorTest {
 
     private Aircraft aircraft;
     private Nasa nasa;
-    private List<Direction> directionList = new ArrayList<>();
+    private List<Instruction> instructionList = new ArrayList<>();
     private Sensor sensor;
 
     @Before
     public void setup() {
         Coordinate coordinate = new Coordinate(5, 5);
-        TableLand tableLand = new TableLand("Marte", 10, 10);
+        TableLand tableLand = new TableLand(10, 10);
         aircraft = new Aircraft(coordinate, Compass.NORTH);
         sensor = new Sensor(tableLand);
         nasa = new Nasa(aircraft, tableLand, sensor);
     }
 
     @Test
-    public void verifyHaveSpaceTableLandLOk() {
-        directionList.add(Direction.L);
-        nasa.moveAircraft(directionList);
+    public void checkSpaceWhenMovingForwardTrue() {
+        instructionList.add(Instruction.M);
+        nasa.moveAircraft(instructionList);
         assertTrue(sensor.verifyHaveSpaceTableLand(aircraft));
     }
 
     @Test
-    public void verifyHaveSpaceTableLandROk() {
-        directionList.add(Direction.R);
-        nasa.moveAircraft(directionList);
+    public void checkSpaceWhenMovingRightTrue() {
+        instructionList.add(Instruction.R);
+        nasa.moveAircraft(instructionList);
         assertTrue(sensor.verifyHaveSpaceTableLand(aircraft));
     }
 
     @Test
-    public void verifyHaveSpaceTableLandMoveOk() {
-        directionList.add(Direction.M);
-        nasa.moveAircraft(directionList);
+    public void checkSpaceWhenMovingLeftTrue() {
+        instructionList.add(Instruction.L);
+        nasa.moveAircraft(instructionList);
         assertTrue(sensor.verifyHaveSpaceTableLand(aircraft));
     }
 
     @Test
-    public void verifyHaveSpaceTableLandMove5timesOk() {
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        nasa.moveAircraft(directionList);
+    public void checkSpaceWhenMoving5timesForwardTrue() {
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        nasa.moveAircraft(instructionList);
         assertTrue(sensor.verifyHaveSpaceTableLand(aircraft));
     }
     @Test(expected = IllegalArgumentException.class)
-    public void verifyHaveSpaceTableLandMove6TimesNOkPositive() {
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        nasa.moveAircraft(directionList);
+    public void checkSpaceWhenMoving6timesForwardFalse() {
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        nasa.moveAircraft(instructionList);
         sensor.verifyHaveSpaceTableLand(aircraft);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void verifyHaveSpaceTablelandMove6TimesNOkNegative() {
-        directionList.add(Direction.L);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        directionList.add(Direction.M);
-        nasa.moveAircraft(directionList);
+    public void checkSpaceWhenMoving6TimesForward() {
+        instructionList.add(Instruction.L);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        nasa.moveAircraft(instructionList);
         sensor.verifyHaveSpaceTableLand(aircraft);
     }
 }

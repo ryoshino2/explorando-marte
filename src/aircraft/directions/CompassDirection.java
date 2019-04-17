@@ -3,8 +3,8 @@ package aircraft.directions;
 import aircraft.Aircraft;
 import aircraft.Coordinate;
 
-public interface SensorNave {
+public interface CompassDirection {
 
-    Coordinate moverNave(Aircraft aircraft);
+    Coordinate moveAircraft(Aircraft aircraft);
 
 }

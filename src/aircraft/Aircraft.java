@@ -1,11 +1,16 @@
 package aircraft;
 
 import instruction.Compass;
+import instruction.Instruction;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Aircraft {
 
     private Coordinate coordinate;
     private Compass compass;
+    private List<Instruction> commands = new ArrayList<>();
 
     public Aircraft(Coordinate coordinate, Compass compass) {
         this.coordinate = coordinate;
@@ -34,4 +39,18 @@ public class Aircraft {
         return "" + compass;
     }
 
+
+    public void transformStringForInstruction(String palavra) {
+        try {
+            for (int i = 0; i < palavra.length(); i++) {
+                commands.add(Instruction.valueOf(palavra.toUpperCase().substring(i, i + 1)));
+            }
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Direcao desconhecida");
+        }
+    }
+
+    public List<Instruction> getCommands() {
+        return commands;
+    }
 }
