@@ -15,7 +15,7 @@ public class NasaTest {
 
     private Aircraft aircraft;
     private Nasa nasa;
-    private List<Instruction> instructionList = new ArrayList<>();
+    private List<Instruction> instructionList = new ArrayList<Instruction>();
 
     @Before
     public void setup() {

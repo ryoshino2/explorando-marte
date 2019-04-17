@@ -10,7 +10,7 @@ public class Aircraft {
 
     private Coordinate coordinate;
     private Compass compass;
-    private List<Instruction> commands = new ArrayList<>();
+    private List<Instruction> commands = new ArrayList<Instruction>();
 
     public Aircraft(Coordinate coordinate, Compass compass) {
         this.coordinate = coordinate;

@@ -2,29 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51228c09-c0f7-4a50-817f-7664dfb4a3f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_13_beta_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_13_beta_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex_marte.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ex_marte.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ex_marte/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ex_marte/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/Aircraft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/Builders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/Builders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/Nasa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/Nasa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/NextDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/NextDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/Sensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/East.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/directions/East.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/North.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/directions/North.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/SensorNave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/directions/CompassDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/South.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/directions/South.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/West.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aircraft/directions/West.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter/ConvertStringForInstruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/instruction/Compass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/Compass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/instruction/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/instruction/Instruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tableLand/TableLand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tableLand/TableLand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ex_marte/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/Aircraft.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/Builders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/Coordinate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/Nasa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/NextDirection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/Sensor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/CompassDirection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/East.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/North.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/South.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aircraft/directions/West.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/converter/ConvertStringForInstruction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/instruction/Compass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/instruction/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/instruction/Instruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tableLand/TableLand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/aircraft/AircraftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/aircraft/AircraftTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/aircraft/NasaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/aircraft/NasaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/aircraft/SensorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/aircraft/SensorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/converter/ConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/converter/ConverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/converter/ConverterTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,35 +39,34 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aircraft/Aircraft.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            <state relative-caret-position="105">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/aircraft/Aircraft.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1275#1276#0" expanded="true" />
-                <element signature="e#1306#1307#0" expanded="true" />
+                <element signature="e#275#288#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Program.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aircraft/Builders.java">
+        <entry file="file://$PROJECT_DIR$/src/java/aircraft/Coordinate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state>
+              <caret column="3" selection-start-column="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -105,21 +108,41 @@
         <option value="$PROJECT_DIR$/src/aircraft/Aircraft.java" />
         <option value="$PROJECT_DIR$/src/aircraft/Nasa.java" />
         <option value="$PROJECT_DIR$/test/aircraft/SensorTest.java" />
-        <option value="$PROJECT_DIR$/test/aircraft/NasaTest.java" />
-        <option value="$PROJECT_DIR$/test/aircraft/AircraftTest.java" />
         <option value="$PROJECT_DIR$/src/converter/Converter.java" />
         <option value="$PROJECT_DIR$/src/converter/ConvertStringForInstruction.java" />
-        <option value="$PROJECT_DIR$/test/converter/ConverterTest.java" />
         <option value="$PROJECT_DIR$/src/aircraft/Builders.java" />
+        <option value="$PROJECT_DIR$/test/converter/ConverterTest.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Program.java" />
+        <option value="$PROJECT_DIR$/test/main/aircraft/AircraftTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/aircraft/Builders.java" />
+        <option value="$PROJECT_DIR$/src/main/java/aircraft/Aircraft.java" />
+        <option value="$PROJECT_DIR$/src/java/aircraft/Aircraft.java" />
+        <option value="$PROJECT_DIR$/test/aircraft/AircraftTest.java" />
+        <option value="$PROJECT_DIR$/test/aircraft/NasaTest.java" />
+        <option value="$PROJECT_DIR$/src/java/aircraft/directions/North.java" />
+        <option value="$PROJECT_DIR$/src/java/aircraft/directions/East.java" />
+        <option value="$PROJECT_DIR$/src/java/aircraft/directions/West.java" />
+        <option value="$PROJECT_DIR$/src/java/aircraft/directions/South.java" />
+        <option value="$PROJECT_DIR$/src/java/tableLand/TableLand.java" />
+        <option value="$PROJECT_DIR$/src/java/aircraft/Builders.java" />
+        <option value="$PROJECT_DIR$/src/java/Program.java" />
       </list>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="229" />
-    <option name="y" value="119" />
-    <option name="width" value="975" />
-    <option name="height" value="557" />
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="1299" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -129,8 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,31 +168,27 @@
               <item name="ex_marte" type="b2602c69:ProjectViewProjectNode" />
               <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ex_marte" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aircraft" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ex_marte" type="b2602c69:ProjectViewProjectNode" />
               <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="aircraft" type="462c0819:PsiDirectoryNode" />
-              <item name="directions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ex_marte" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ex_marte" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="instruction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ex_marte" type="b2602c69:ProjectViewProjectNode" />
               <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tableLand" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -179,22 +196,12 @@
               <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ex_marte" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="aircraft" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ex_marte" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex_marte" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="converter" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,14 +212,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/explorando-marte" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="aircraft" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="main" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -239,20 +255,33 @@
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Program" />
       <module name="ex_marte" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NasaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Program" />
+      <module name="ex_marte" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AircraftTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ex_marte" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="aircraft.*" />
+          <option name="PATTERN" value="main.aircraft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="aircraft" />
-      <option name="MAIN_CLASS_NAME" value="aircraft.NasaTest" />
+      <option name="PACKAGE_NAME" value="main.aircraft" />
+      <option name="MAIN_CLASS_NAME" value="main.aircraft.AircraftTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -262,12 +291,12 @@
       <module name="ex_marte" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="aircraft.*" />
+          <option name="PATTERN" value="main.aircraft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="aircraft" />
-      <option name="MAIN_CLASS_NAME" value="aircraft.NasaTest" />
+      <option name="PACKAGE_NAME" value="main.aircraft" />
+      <option name="MAIN_CLASS_NAME" value="main.aircraft.NasaTest" />
       <option name="METHOD_NAME" value="Move5TimesForwardAircraft" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -278,12 +307,12 @@
       <module name="ex_marte" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="aircraft.*" />
+          <option name="PATTERN" value="main.aircraft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="aircraft" />
-      <option name="MAIN_CLASS_NAME" value="aircraft.SensorTest" />
+      <option name="PACKAGE_NAME" value="main.aircraft" />
+      <option name="MAIN_CLASS_NAME" value="main.aircraft.SensorTest" />
       <option name="METHOD_NAME" value="verifyHaveSpaceTableLandLOk" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -293,9 +322,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Program" />
+        <item itemvalue="Application.Program (1)" />
+        <item itemvalue="JUnit.AircraftTest" />
         <item itemvalue="JUnit.NasaTest.Move5TimesForwardAircraft" />
         <item itemvalue="JUnit.SensorTest.verifyHaveSpaceTableLandLOk" />
-        <item itemvalue="JUnit.NasaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -325,12 +355,18 @@
     <history-entry file="NasaTest_Move5TimesForwardAircraft - 2019.04.17 at 15h 49m 29s.xml">
       <configuration name="NasaTest.Move5TimesForwardAircraft" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AircraftTest - 2019.04.17 at 16h 44m 29s.xml">
+      <configuration name="AircraftTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AircraftTest - 2019.04.17 at 16h 45m 09s.xml">
+      <configuration name="AircraftTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32322428" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29130086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -340,13 +376,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990228" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.12067156" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.20032573" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -370,88 +406,21 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/directions/CompassDirection.java">
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/directions/CompassDirection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/directions/East.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/directions/North.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/directions/South.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/directions/West.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/Coordinate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/NextDirection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/Sensor.java">
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/Sensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instruction/Compass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instruction/Instruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tableLand/TableLand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/Nasa.java">
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/Nasa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
@@ -465,57 +434,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/aircraft/NasaTest.java">
+    <entry file="file://$PROJECT_DIR$/src/converter/ConvertStringForInstruction.java" />
+    <entry file="file://$PROJECT_DIR$/test/converter/ConverterTest.java" />
+    <entry file="file://$PROJECT_DIR$/ex_marte.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="170" column="37" selection-start-line="170" selection-start-column="37" selection-end-line="170" selection-end-column="37" />
+        <state relative-caret-position="90">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/NextDirection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/instruction/Compass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/instruction/Instruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/directions/North.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/directions/West.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/directions/South.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/directions/East.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/aircraft/AircraftTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/Aircraft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#316#329#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aircraft/Builders.java">
+    <entry file="file://$PROJECT_DIR$/test/aircraft/NasaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+          <folding>
+            <element signature="e#394#407#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/converter/ConverterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="34" column="35" selection-start-column="2" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/converter/ConvertStringForInstruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="40" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.java">
+    <entry file="file://$PROJECT_DIR$/src/java/tableLand/TableLand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/Aircraft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#275#288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/Coordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/aircraft/Builders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -536,6 +581,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -558,6 +604,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8.0_191</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

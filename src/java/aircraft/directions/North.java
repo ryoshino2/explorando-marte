@@ -5,7 +5,6 @@ import aircraft.Coordinate;
 
 public class North implements CompassDirection {
 
-    @Override
     public Coordinate moveAircraft(Aircraft aircraft) {
         return aircraft.setCoordinate(aircraft.getCoordinate().incraseLengthCoordinate());
     }

@@ -24,4 +24,5 @@ public class TableLand {
     public String toString() {
         return getWidth() + " " + getLength();
     }
+
 }
