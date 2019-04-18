@@ -21,7 +21,7 @@ public class NasaTest {
     public void setup() {
         Coordinate coordinate = new Coordinate(5, 5);
         TableLand tableLand = new TableLand( 10, 10);
-        aircraft = new Aircraft(coordinate, Compass.NORTH);
+        aircraft = new Aircraft(coordinate, Compass.N);
         Sensor sensor = new Sensor(tableLand);
         nasa = new Nasa(aircraft, tableLand, sensor);
     }

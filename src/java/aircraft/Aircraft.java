@@ -10,7 +10,7 @@ public class Aircraft {
 
     private Coordinate coordinate;
     private Compass compass;
-    private List<Instruction> commands = new ArrayList<Instruction>();
+    private List<Instruction> commands = new ArrayList<>();
 
     public Aircraft(Coordinate coordinate, Compass compass) {
         this.coordinate = coordinate;
@@ -38,7 +38,6 @@ public class Aircraft {
     public String toString() {
         return "" + compass;
     }
-
 
     public void transformStringForInstruction(String palavra) {
         try {

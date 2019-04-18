@@ -11,10 +11,10 @@ final class NextDirection {
 
     static {
         windRose = new HashMap<Compass, NextDirection>();
-        windRose.put(Compass.NORTH, new NextDirection(Compass.EAST, Compass.WEST));
-        windRose.put(Compass.SOUTH, new NextDirection(Compass.WEST, Compass.EAST));
-        windRose.put(Compass.EAST, new NextDirection(Compass.SOUTH, Compass.NORTH));
-        windRose.put(Compass.WEST, new NextDirection(Compass.NORTH, Compass.SOUTH));
+        windRose.put(Compass.N, new NextDirection(Compass.E, Compass.W));
+        windRose.put(Compass.S, new NextDirection(Compass.W, Compass.E));
+        windRose.put(Compass.E, new NextDirection(Compass.S, Compass.N));
+        windRose.put(Compass.W, new NextDirection(Compass.N, Compass.S));
     }
 
     private Compass right;

@@ -18,7 +18,7 @@ public class AircraftTest {
     @Before
     public void setup() {
         aircraft.Coordinate coordinate = new aircraft.Coordinate(5, 5);
-        aircraft = new aircraft.Aircraft(coordinate, Compass.NORTH);
+        aircraft = new aircraft.Aircraft(coordinate, Compass.N);
     }
 
     @Test

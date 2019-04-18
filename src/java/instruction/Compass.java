@@ -1,10 +1,10 @@
 package instruction;
 
 public enum Compass {
-    NORTH('N'),
-    EAST('E'),
-    SOUTH('S'),
-    WEST('W');
+    N('N'),
+    E('E'),
+    S('S'),
+    W('W');
 
     private final char asChar;
 
