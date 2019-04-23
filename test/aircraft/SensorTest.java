@@ -9,6 +9,7 @@ import tableLand.TableLand;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class SensorTest {
@@ -22,7 +23,7 @@ public class SensorTest {
     public void setup() {
         Coordinate coordinate = new Coordinate(5, 5);
         TableLand tableLand = new TableLand(10, 10);
-        aircraft = new Aircraft(coordinate, Compass.N);
+        aircraft = new Aircraft(5,5, Compass.N);
         sensor = new Sensor(tableLand);
         nasa = new Nasa(aircraft, tableLand, sensor);
     }
@@ -56,23 +57,11 @@ public class SensorTest {
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         nasa.moveAircraft(instructionList);
-        assertTrue(sensor.verifyHaveSpaceTableLand(aircraft));
-    }
-    @Test(expected = IllegalArgumentException.class)
-    public void checkSpaceWhenMoving6timesForwardFalse() {
-        instructionList.add(Instruction.M);
-        instructionList.add(Instruction.M);
-        instructionList.add(Instruction.M);
-        instructionList.add(Instruction.M);
-        instructionList.add(Instruction.M);
-        instructionList.add(Instruction.M);
-        nasa.moveAircraft(instructionList);
-        sensor.verifyHaveSpaceTableLand(aircraft);
+        assertEquals(10, aircraft.getLengthCoordinate().intValue());
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void checkSpaceWhenMoving6TimesForward() {
-        instructionList.add(Instruction.L);
+    public void checkSpaceWhenMoving6timesForward() {
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
@@ -80,6 +69,65 @@ public class SensorTest {
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         nasa.moveAircraft(instructionList);
-        sensor.verifyHaveSpaceTableLand(aircraft);
+    }
+
+    @Test
+    public void checkSpaceWhenMoving5timesForwardAnd1timeLeft() {
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.L);
+        nasa.moveAircraft(instructionList);
+        assertEquals(10, aircraft.getLengthCoordinate().intValue());
+        assertEquals('W', (char) aircraft.getCompass().asChar());
+    }
+
+    @Test
+    public void checkSpaceWhenMoving5timesForward1TimeLeftAnd1timeForward() {
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.L);
+        instructionList.add(Instruction.M);
+        nasa.moveAircraft(instructionList);
+        assertEquals(4, aircraft.getWidthCoordinate().intValue());
+        assertEquals('W', (char) aircraft.getCompass().asChar());
+    }
+
+    @Test
+    public void checkSpaceWhenMoving5timesForward2TimesLeftAnd1timeForward() {
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.L);
+        instructionList.add(Instruction.L);
+        instructionList.add(Instruction.M);
+
+        nasa.moveAircraft(instructionList);
+        assertEquals(9, aircraft.getLengthCoordinate().intValue());
+        assertEquals('S', (char) aircraft.getCompass().asChar());
+    }
+
+    @Test
+    public void checkSpaceWhenMoving5timesForward1TimeRightAnd1TimeForward(){
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.M);
+        instructionList.add(Instruction.R);
+        instructionList.add(Instruction.M);
+
+        nasa.moveAircraft(instructionList);
+        assertEquals(10, aircraft.getLengthCoordinate().intValue());
+        assertEquals(6, aircraft.getWidthCoordinate().intValue());
+        assertEquals('E', (char) aircraft.getCompass().asChar());
+
     }
 }

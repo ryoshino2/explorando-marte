@@ -5,8 +5,8 @@ import aircraft.Coordinate;
 
 public class South implements CompassDirection {
 
-    public Coordinate moveAircraft(Aircraft aircraft) {
-        return aircraft.setCoordinate(aircraft.getCoordinate().subtractLengthCoordinate());
+    public Integer moveAircraft(Aircraft aircraft) {
+        return aircraft.setCoordinate(aircraft.subtractLengthCoordinate());
     }
 
 

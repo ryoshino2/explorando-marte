@@ -21,7 +21,7 @@ public class NasaTest {
     public void setup() {
         Coordinate coordinate = new Coordinate(5, 5);
         TableLand tableLand = new TableLand( 10, 10);
-        aircraft = new Aircraft(coordinate, Compass.N);
+        aircraft = new Aircraft(5,5, Compass.N);
         Sensor sensor = new Sensor(tableLand);
         nasa = new Nasa(aircraft, tableLand, sensor);
     }
@@ -108,7 +108,7 @@ public class NasaTest {
         instructionList.add(Instruction.M);
 
         nasa.moveAircraft(instructionList);
-        assertEquals(6, (int) aircraft.getCoordinate().getLengthCoordinate());
+        assertEquals(6, (int) aircraft.getLengthCoordinate());
     }
 
     @Test
@@ -117,7 +117,7 @@ public class NasaTest {
         instructionList.add(Instruction.R);
 
         nasa.moveAircraft(instructionList);
-        assertEquals(6, (int) aircraft.getCoordinate().getLengthCoordinate());
+        assertEquals(6, (int) aircraft.getLengthCoordinate());
     }
 
 
@@ -127,7 +127,7 @@ public class NasaTest {
         instructionList.add(Instruction.L);
 
         nasa.moveAircraft(instructionList);
-        assertEquals(6, (int) aircraft.getCoordinate().getLengthCoordinate());
+        assertEquals(6, (int) aircraft.getLengthCoordinate());
     }
 
 
@@ -137,16 +137,16 @@ public class NasaTest {
         instructionList.add(Instruction.M);
 
         nasa.moveAircraft(instructionList);
-        assertEquals(5, (int) aircraft.getCoordinate().getLengthCoordinate());
+        assertEquals(5, (int) aircraft.getLengthCoordinate());
     }
 
     @Test
-    public void MoveRAndForwardAircraft() {
+    public void MoveRightAndForwardAircraft() {
         instructionList.add(Instruction.R);
         instructionList.add(Instruction.M);
 
         nasa.moveAircraft(instructionList);
-        assertEquals(5, (int) aircraft.getCoordinate().getLengthCoordinate());
+        assertEquals(5, (int) aircraft.getLengthCoordinate());
     }
 
     @Test
@@ -156,7 +156,7 @@ public class NasaTest {
         instructionList.add(Instruction.M);
 
         nasa.moveAircraft(instructionList);
-        assertEquals(4, (int) aircraft.getCoordinate().getLengthCoordinate());
+        assertEquals(4, (int) aircraft.getLengthCoordinate());
     }
 
     @Test
@@ -168,6 +168,6 @@ public class NasaTest {
         instructionList.add(Instruction.M);
 
         nasa.moveAircraft(instructionList);
-        assertEquals(10, (int) aircraft.getCoordinate().getLengthCoordinate());
+        assertEquals(10, (int) aircraft.getLengthCoordinate());
     }
 }

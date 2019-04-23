@@ -11,7 +11,7 @@ public class Nasa {
 
     private final Aircraft aircraft;
     private final Sensor sensor;
-    private int posicaoNaLista;
+    private int positionList;
 
     public Nasa(Aircraft aircraft, TableLand tableLand, Sensor sensor) {
         this.aircraft = aircraft;
@@ -19,32 +19,30 @@ public class Nasa {
     }
 
     private void rotateAircraft(List<Instruction> instruction) {
-        if (Instruction.L.equals(instruction.get(posicaoNaLista).asChar())) {
+        if (Instruction.L.equals(instruction.get(positionList).asChar())) {
             aircraft.setCompass(NextDirection.getLeftOf(aircraft.getCompass()));
-        } else if (Instruction.R.equals(instruction.get(posicaoNaLista).asChar())) {
+        } else if (Instruction.R.equals(instruction.get(positionList).asChar())) {
             aircraft.setCompass(NextDirection.getRightOf(aircraft.getCompass()));
         }
     }
 
     public void moveAircraft(List<Instruction> instruction) {
-        for (posicaoNaLista = 0; posicaoNaLista < instruction.size(); posicaoNaLista++) {
-            if (sensor.verifyHaveSpaceTableLand(aircraft)) {
-                switch (getDirectionList(instruction).get(posicaoNaLista).asChar()) {
-                    case L:
-                        // Falls through
-                    case R:
-                        rotateAircraft(instruction);
-                        break;
-                    case M:
+        for (positionList = 0; positionList < instruction.size(); positionList++) {
+            switch (getDirectionList(instruction).get(positionList).asChar()) {
+                case L:
+                    // Falls through
+                case R:
+                    rotateAircraft(instruction);
+                    break;
+                case M:
+                    if (sensor.verifyHaveSpaceTableLand(aircraft)) {
                         sensorAircraft();
-                        break;
-                }
+                    }
+                    break;
             }
         }
-
     }
 
-    //Ajustar
     private void sensorAircraft() {
         CompassDirection sensorNave = null;
         if (aircraft.getCompass().asChar() == 'N') {
@@ -59,6 +57,7 @@ public class Nasa {
         if (aircraft.getCompass().asChar() == 'S') {
             sensorNave = new South();
         }
+        assert sensorNave != null;
         sensorNave.moveAircraft(aircraft);
     }
 

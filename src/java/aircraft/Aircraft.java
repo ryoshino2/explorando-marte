@@ -1,19 +1,16 @@
 package aircraft;
 
 import instruction.Compass;
-import instruction.Instruction;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Aircraft {
 
-    private Coordinate coordinate;
     private Compass compass;
-    private List<Instruction> commands = new ArrayList<>();
+    private Integer widthCoordinate;
+    private Integer lengthCoordinate;
 
-    public Aircraft(Coordinate coordinate, Compass compass) {
-        this.coordinate = coordinate;
+    public Aircraft(Integer widthCoordinate, Integer lengthCoordinate, Compass compass) {
+        this.widthCoordinate = widthCoordinate;
+        this.lengthCoordinate = lengthCoordinate;
         this.compass = compass;
     }
 
@@ -25,31 +22,30 @@ public class Aircraft {
         this.compass = compass;
     }
 
-    public Coordinate getCoordinate() {
+    public Integer getWidthCoordinate() {
+        return widthCoordinate;
+    }
+
+    public Integer getLengthCoordinate() {
+        return lengthCoordinate;
+    }
+
+    public Integer setCoordinate(Integer coordinate) {
         return coordinate;
     }
 
-    public Coordinate setCoordinate(Coordinate coordinate) {
-        this.coordinate = coordinate;
-        return coordinate;
+    public Integer incraseWidthCoordinate(){
+        return widthCoordinate = widthCoordinate+1;
     }
 
-    @Override
-    public String toString() {
-        return "" + compass;
+    public Integer subtractWidthCoordinate(){
+        return widthCoordinate = widthCoordinate-1;
     }
 
-    public void transformStringForInstruction(String palavra) {
-        try {
-            for (int i = 0; i < palavra.length(); i++) {
-                commands.add(Instruction.valueOf(palavra.toUpperCase().substring(i, i + 1)));
-            }
-        } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("Direcao desconhecida");
-        }
+    public Integer incraseLengthCoordinate(){
+        return lengthCoordinate = lengthCoordinate+1;
     }
-
-    public List<Instruction> getCommands() {
-        return commands;
+    public Integer subtractLengthCoordinate(){
+        return lengthCoordinate = lengthCoordinate-1;
     }
 }
