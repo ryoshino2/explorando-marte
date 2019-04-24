@@ -16,12 +16,12 @@ public class SensorTest {
 
     private Aircraft aircraft;
     private Nasa nasa;
-    private List<Instruction> instructionList = new ArrayList<>();
+    private List<Instruction> instructionList;
     private Sensor sensor;
 
     @Before
     public void setup() {
-        Coordinate coordinate = new Coordinate(5, 5);
+        instructionList = new ArrayList<>();
         TableLand tableLand = new TableLand(10, 10);
         aircraft = new Aircraft(5,5, Compass.N);
         sensor = new Sensor(tableLand);
@@ -30,56 +30,76 @@ public class SensorTest {
 
     @Test
     public void checkSpaceWhenMovingForwardTrue() {
+        // arrange
         instructionList.add(Instruction.M);
+        // act
         nasa.moveAircraft(instructionList);
+        // assert
         assertTrue(sensor.verifyHaveSpaceTableLand(aircraft));
     }
 
     @Test
     public void checkSpaceWhenMovingRightTrue() {
+        //arrange
         instructionList.add(Instruction.R);
+        // act
         nasa.moveAircraft(instructionList);
+        //assert
         assertTrue(sensor.verifyHaveSpaceTableLand(aircraft));
     }
 
     @Test
     public void checkSpaceWhenMovingLeftTrue() {
+        //arrange
         instructionList.add(Instruction.L);
+        // act
         nasa.moveAircraft(instructionList);
+        //assert
         assertTrue(sensor.verifyHaveSpaceTableLand(aircraft));
     }
 
     @Test
     public void checkSpaceWhenMoving5timesForwardTrue() {
+        //arrange
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
+
+        //act
         nasa.moveAircraft(instructionList);
+
+        //assert
         assertEquals(10, aircraft.getLengthCoordinate().intValue());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void checkSpaceWhenMoving6timesForward() {
+        //arrange
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
+        //act
         nasa.moveAircraft(instructionList);
     }
 
     @Test
     public void checkSpaceWhenMoving5timesForwardAnd1timeLeft() {
+        //arrange
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.M);
         instructionList.add(Instruction.L);
+        //act
         nasa.moveAircraft(instructionList);
+
+        //assert
         assertEquals(10, aircraft.getLengthCoordinate().intValue());
         assertEquals('W', (char) aircraft.getCompass().asChar());
     }
