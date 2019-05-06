@@ -2,9 +2,13 @@ package aircraft;
 
 import tableLand.TableLand;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sensor {
 
     private TableLand tableLand;
+    private List<Aircraft> aircraftList = new ArrayList<>();
 
     public Sensor(TableLand tableLand) {
         this.tableLand = tableLand;
@@ -14,11 +18,18 @@ public class Sensor {
         if (tableLand.getLength() < aircraft.getLengthCoordinate() || tableLand.getWidth() < aircraft.getWidthCoordinate()) {
             throw new IllegalArgumentException("Fora do terreno");
         }
-        return verifyWidthLenghtNegative(aircraft);
+        return verifyWidthNegative(aircraft);
     }
 
-    private boolean verifyWidthLenghtNegative(Aircraft aircraft) {
-        if (aircraft.getLengthCoordinate() < 0 || aircraft.getWidthCoordinate() < 0) {
+    private boolean verifyWidthNegative(Aircraft aircraft) {
+        if ((aircraft.getWidthCoordinate() - 1 < 0) && (aircraft.getCompass().asChar() == 'W')) {
+            throw new IllegalArgumentException("Fora do terreno");
+        }
+        return verifyLengthNegative(aircraft);
+    }
+
+    private boolean verifyLengthNegative(Aircraft aircraft) {
+        if ((aircraft.getLengthCoordinate() - 1 < 0) && aircraft.getCompass().asChar() == 'S') {
             throw new IllegalArgumentException("Fora do terreno");
         }
         return verifySubtractWidth(aircraft);
@@ -50,5 +61,15 @@ public class Sensor {
             throw new IllegalArgumentException("Fora do terreno");
         }
         return true;
+    }
+
+    public void markAircraftPosition(Aircraft aircraft) {
+        for (Aircraft value : aircraftList) {
+            if (aircraft.getLengthCoordinate().equals(value.getLengthCoordinate()) &&
+                    aircraft.getWidthCoordinate().equals(value.getWidthCoordinate())) {
+                throw new IllegalArgumentException("Já possui sonda no local");
+            }
+        }
+        aircraftList.add(aircraft);
     }
 }

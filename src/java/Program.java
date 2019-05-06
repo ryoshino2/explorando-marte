@@ -1,17 +1,21 @@
-import aircraft.ConvertString;
+import aircraft.NasaInstructions;
 
 public class Program {
 
     public static void main(String[] args) {
-        final ConvertString convert = new ConvertString();
+        final NasaInstructions nasa = new NasaInstructions();
 
         String input = "5 5\n"
                 + "1 2 N\n"
                 + "LMLMLMLMM\n"
                 + "3 3 E\n"
-                + "MMRMMRMRRM\n";
+                + "MMRMMRMRRM\n"
+                + "1 1 N\n"
+                + "LMLMLMLMM\n"
+                + "1 3 N\n"
+                + "LMLMLMLMM\n";
 
-        convert.runInstructions(input);
-        convert.viewAircraft();
+        nasa.runInstructions(input);
+        nasa.viewAircraft();
     }
 }

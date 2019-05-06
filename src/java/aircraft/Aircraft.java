@@ -34,18 +34,19 @@ public class Aircraft {
         return coordinate;
     }
 
-    public Integer incraseWidthCoordinate(){
-        return widthCoordinate = widthCoordinate+1;
+    public Integer incraseWidthCoordinate() {
+        return widthCoordinate = widthCoordinate + 1;
     }
 
-    public Integer subtractWidthCoordinate(){
-        return widthCoordinate = widthCoordinate-1;
+    public Integer subtractWidthCoordinate() {
+        return widthCoordinate = widthCoordinate - 1;
     }
 
-    public Integer incraseLengthCoordinate(){
-        return lengthCoordinate = lengthCoordinate+1;
+    public Integer incraseLengthCoordinate() {
+        return lengthCoordinate = lengthCoordinate + 1;
     }
-    public Integer subtractLengthCoordinate(){
-        return lengthCoordinate = lengthCoordinate-1;
+
+    public Integer subtractLengthCoordinate() {
+        return lengthCoordinate = lengthCoordinate - 1;
     }
 }

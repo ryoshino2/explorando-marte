@@ -2,9 +2,7 @@ package tableLand;
 
 public class TableLand {
 
-    //x
     private Integer width;
-    //y
     private Integer length;
 
     public TableLand(Integer width, Integer length) {

@@ -7,7 +7,7 @@ import tableLand.TableLand;
 
 import java.util.List;
 
-public class Nasa {
+public class Nasa implements ControlAirship {
 
     private final Aircraft aircraft;
     private final Sensor sensor;
@@ -18,7 +18,8 @@ public class Nasa {
         this.sensor = sensor;
     }
 
-    private void rotateAircraft(List<Instruction> instruction) {
+    @Override
+    public void rotateAircraft(List<Instruction> instruction) {
         if (Instruction.L.equals(instruction.get(positionList).asChar())) {
             aircraft.setCompass(NextDirection.getLeftOf(aircraft.getCompass()));
         } else if (Instruction.R.equals(instruction.get(positionList).asChar())) {
@@ -26,6 +27,7 @@ public class Nasa {
         }
     }
 
+    @Override
     public void moveAircraft(List<Instruction> instruction) {
         for (positionList = 0; positionList < instruction.size(); positionList++) {
             switch (getDirectionList(instruction).get(positionList).asChar()) {
@@ -41,9 +43,11 @@ public class Nasa {
                     break;
             }
         }
+        sensor.markAircraftPosition(aircraft);
     }
 
-    private void sensorAircraft() {
+    @Override
+    public void sensorAircraft() {
         CompassDirection sensorNave = null;
         if (aircraft.getCompass().asChar() == 'N') {
             sensorNave = new North();
